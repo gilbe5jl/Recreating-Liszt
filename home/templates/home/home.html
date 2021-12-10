@@ -1,15 +1,40 @@
 {% extends "home/base.html" %}
 {% block content%}
-    {% for post in posts%}
-            <article class="media content-section">
-              <div class="media-body">
-                <div class="article-metadata">
-                  <a class="mr-2" href="#">{{ post.author }}</a>
-                  <small class="text-muted">{{ post.date_posted |date:"F d, Y" }}</small>
-                </div>
-                <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-                <p class="article-content">{{ post.content }}</p>
-              </div>
-            </article>
-    {% endfor %}
+
+  <h1>Project Background</h1>
+
+  <p>
+
+    Recreating Liszt is a project that's focused on using machine learning to create music that is similar in style to world-renowned composer and pianist
+    Franz Liszt. Our project is a development team consisting of 7 people, split into two halves:
+
+  </p>
+
+  <h4>
+      Web Application
+  </h4>
+<p> One half (3/7) of the group is focused on the web-application. The members of this team include Hailey Werth,
+    Roger Mawby, and Zachary McDonald. The web app is built from Django for the back-end, and Django Templates using HTML, CSS, and Bootstrap for the front-end.
+    The web-app features a fully functioning user-registration system, login/logout system, and a clear, simple UI to navigate to all of our pages. While
+    rummaging through the site you may find: a page containing a Python notebook so that you can view our code, links to Google Colab and our Github
+    repository so that you can run/edit the code yourself, a small biography about Franz Liszt, and a small biography about our dev team. </p>
+
+    <h4>
+        Machine Learning
+    </h4>
+
+  The other half of the group (4/7) is focused on the machine learning portion of the project. The members of that team include Zack Saffron,
+  Brady Granquist, Hunter Francek, and Jalen Gilbert. We chose to use Google Colab and and Magenta to accomplish our task of building the AI.
+  Magenta is a Python library that's powered by TensorFlow that helps us generate the music.
+  The goal of this project is simple: we aim to use Machine Learning to recreate the music of 19th-century composer and pianist Franz Lizst.
+  <br>
+  <br>
+
+
+
+  <figure>
+  <img src="https://lh3.googleusercontent.com/vamLOgMv0HTmXe71OkrZjUBgl838h7k7lZG9ASmQyF2WaDyo3FVGtXma3dwWqYDtMo8HDAc8wqk_MAV_3XqOjd3W-vKUdSSoC_LjAklQagcZdv2BLI_fSyeJ1SBILE0FHjg2qHAxMg=w2400"  alt="CMU Logo"  style="width:500px;height:20Spx;">
+<br>
+<br>
+<figcaption> Source: <a href="https://www.cmich.edu/office_president/university_communications/brand/Pages/templates_downloads.aspx">CMU</a> <a href="https://cdn.britannica.com/04/82304-050-242D7462/Franz-Liszt-oil-canvas-Henri-Lehmann-Carnavalet-1840.jpg"></a></p></figcaption>
 {% endblock content %}
