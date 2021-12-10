@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css-->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
@@ -21,8 +21,8 @@
 <body>
     <header class="site-header">
         <!-- modify bg to change navbar color -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
           <a class="navbar-brand mr-4" href="{% url 'home-home' %}">Recreating Liszt</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,13 +33,13 @@
               <a class="nav-item nav-link" href="{% url 'home-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'home-about' %}">About</a>
               <a class="nav-item nav-link" href="{% url 'home-liszt' %}">Franz Liszt</a>
-              <a class="nav-item nav-link" href="{% url 'home-project' %}">Our Project</a>
               <a class="nav-item nav-link" href="{% url 'home-music' %}">Premade Music</a>
-              <a class="nav-item nav-link" href="{% url 'home-AI' %}">Jupyter Notebook</a>
+              <a class="nav-item nav-link" href="{% url 'home-AI' %}">Notebook</a>
 
 
             </div>
             <!-- Navbar Right Side -->
+
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
                   <a class="nav-item nav-link" href="{% url 'profile'%}">Profile</a>
@@ -53,7 +53,7 @@
         </div>
       </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container-fluid">
       <div class="row">
         <div class="col-md-8">
           {% if messages %}
@@ -69,11 +69,13 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Additional Info</h3>
-            <p class='text-muted'>Click below to find additional reading about Franz Liszt or to see our project's Github repository.
+            <h3 style="color:white"> Additional Info</h3>
+            <p class='text-light'>Click below to find additional reading about Franz Liszt or to see our project's Github repository.
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light"><a href="https://www.britannica.com/biography/Franz-Liszt">Additional Reading</a></li>
-                <li class="list-group-item list-group-item-light"><a href="https://github.com/ZackSaffron/CPS410Project">Project Repository</a></li>
+                <li class="list-group-item list-group-item-dark"><a href="https://www.britannica.com/biography/Franz-Liszt">Additional Reading</a></li>
+                <li class="list-group-item list-group-item-dark"><a href="https://github.com/ZackSaffron/CPS410Project">Github Repository</a></li>
+                <li class="list-group-item list-group-item-dark"><a href="https://colab.research.google.com/drive/1Qp_YxhRzqkieyHhvYUlGV5stdeJ_ZufA#scrollTo=g5-_OsqtiBMM">Google Colab</a></li>
+
               </ul>
             </p>
           </div>
